@@ -1,0 +1,13 @@
+*.aux
+*.log
+*.out
+*.swp
+# *.pdf
+*.zip
+*.fdb_latexmk
+*.fls
+*.xdv
+__latexindent_temp.tex
+
+.vscode
+.devcontainer
