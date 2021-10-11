@@ -13,12 +13,13 @@
   (+44) 07740271205 $\bullet$
   \href{mailto:zhuoyingjiangli@gmail.com}{zhuoyingjiangli@gmail.com} $\bullet$
   \href{https://github.com/RoundofThree}{GitHub ID: RoundofThree}
-%  \href{https://www.linkedin.com/in/trinkle23897/}{Linkedin}
+%  \href{https://www.linkedin.com/in/RoundofThree/}{Linkedin}
 }
 
 \section{Education}
 \datedsubsection{\textbf{\href{https://www.kcl.ac.uk/}{King's College London}}, London, UK}{09/2019 -- 06/2022 (expected)}
-BSc Computer Science, Department of Informatics
+BSc Computer Science: \textit{Information Security, Cryptography, Operating Systems, Internet Systems, Compilers, Foundations of Computing (Maths),
+C++ for algorithms and data structures, Optimization Methods, Artificial Intelligence}
 \datedsubsection{\textbf{IES Son Pacs}, Balearic Islands, Spain}{09/2017 -- 06/2019}
 International Baccalaureate, Grade: 45/45, Extended Essay (Maths): A
 
@@ -29,24 +30,61 @@ International Baccalaureate, Grade: 45/45, Extended Essay (Maths): A
 % Blog where I write about ...
 % Rust bash shell PRIVATE FOR NOW
 \section{Selected Projects}
+
+% Regex matching engine: Brozowski algorithm based on derivatives
+\datedsubsection{\textbf{Regular expression matcher}: A regular expression matcher using Brzozowski algorithm}{09/2021}
+\begin{itemize}
+  \item Derived and proved the correctness of the Brzozowski derivatives for extended regular expression operations
+  \item Implemented the Brzozowski algorithm in a functional language (Scala)
+\end{itemize}
+
+% Rust shell: cs4414 University of Virginia Operating Systems course using Rust
+\datedsubsection{\textbf{Userland shell}: A minimal userland shell written in Rust}{09/2021 -- Ongoing}
+\begin{itemize}
+  \item Implemented common internal commands, redirection and pipes
+  \item Added support for background processes using threads
+\end{itemize}
+
 % \datedsubsection{\href{https://github.com/RoundofThree/optiver-competition}{\textbf{Optiver volatility prediction}}: Predict volatility given past trade and price series}{08/2021}
-\datedsubsection{\textbf{Optiver volatility prediction}: Predict volatility given past trade and price series}{08/2021}
+\datedsubsection{\textbf{Optiver volatility prediction}: Predict volatility given past trade and price series}{08/2021 -- 09/2021}
 \begin{itemize}
   \item Implemented and compared different algorithms (decision trees and NN) in Python
   \item Optimized hyperparameters using Optuna
   \item Designed the prediction generator architecture having extensibility in mind
 \end{itemize}
 
-\datedsubsection{\href{https://roundofthree.github.io/labs}{\textbf{Blog}}: Hacking and competitions writeups}{Ongoing}
+% C rootkit
+\datedsubsection{\textbf{Userland rootkit}: A Linux rootkit in C based on hijacking DLL}{08/2021 -- Ongoing}
 \begin{itemize}
-  \item Worked on and analysed 20+ challenges on HackTheBox and other CTFs
-  \item Wrote walkthroughs notes about operating system internals, shells, exploits
+  \item Added support for hooking system calls using LD\_PRELOAD environment variable
+\end{itemize}
+
+% MIT Distributed systems: golang MapReduce, raft server
+\datedsubsection{\textbf{MapReduce client/server}: A MapReduce implementation in Golang}{07/2021}
+\begin{itemize}
+  \item Implemented the MapReduce model based on the paper \textit{MapReduce: Simplified Data Processing on Large Clusters} by Google and the MIT Distributed Systems course
 \end{itemize}
 
 \datedsubsection{\href{https://github.com/RoundofThree/INT-Coursework-2021}{\textbf{Sokoban solver}}: A Sokoban solver using PDDL and OPTIC planner}{04/2021}
 \begin{itemize}
   \item Analysed and performed experiments with OPTIC planner applied to Sokoban game
   \item Wrote a detailed report in \LaTeX
+\end{itemize}
+
+\datedsubsection{\href{https://roundofthree.github.io/labs}{\textbf{Blog}}: Hacking and competitions writeups}{Ongoing}
+\begin{itemize}
+  \item Worked on and analysed 20+ challenges and vulnerable machines on HackTheBox and other CTFs
+  \item Wrote walkthroughs notes about operating system internals, shells, exploits
+\end{itemize}
+
+% Python implementations of algorithms DPLL, topological sorting, ...
+\datedsubsection{\href{https://github.com/RoundofThree/python-scripts}{\textbf{Algorithms implementation}}: Python implementation of algorithms}{Ongoing}
+\begin{itemize}
+  \item Implemented greedy and DPLL SAT solver
+  \item Implemented algorithm to perform topological sorting given a directed graph
+  \item Implemented algorithm to generate a connected components graph from a directed graph
+  \item Implemented 2-opt TSP solver, to find local minimum weighted Hamiltonian cycle in a complete graph expressed with a cost adjacency matrix
+  \item Implemented KMeans for clustering and Hunt algorithm for building a decision tree
 \end{itemize}
 
 % -----------------------------------------------------------
@@ -70,14 +108,14 @@ International Baccalaureate, Grade: 45/45, Extended Essay (Maths): A
 
 \datedsubsection{\textbf{\href{https://app.hackthebox.eu/profile/367478}{HackTheBox Pro Hacker}}}{Remote}
 \begin{itemize}
-  \item Solved (mostly) reverse engineering challenges
+  \item Solved (mostly) reverse engineering challenges using Ghidra, x64dbg and gdb
   \item Attacked 15+ (mostly) Linux machines
 \end{itemize}
 
 \datedsubsection{\textbf{SnapSense} (Startup)}{Remote}
 \datedsubsection{Software Developer}{03/2021}
 \begin{itemize}
-  \item Implemented a diabetes ulcer monitoring system using Ruby on Rails + Bootstrap
+  \item Implemented a diabetes ulcer monitoring system using Ruby on Rails
   \item Deployed resources and backend server to AWS using S3, RDS and EB cloud services
 \end{itemize}
 
@@ -85,7 +123,7 @@ International Baccalaureate, Grade: 45/45, Extended Essay (Maths): A
 \datedsubsection{Software Developer}{09/2020}
 \begin{itemize}
     \item Built a WeChat miniprogram for news, weather, restaurant listing, second hand exchange, events and more
-    \item Supported one-click event booking
+    \item Added support for one-click event booking
 \end{itemize}
 
 % \datedsubsection{\textbf{\href{https://www.kcl.ac.uk/}{Student Staff Liason Committee}}, King's College London}{Remote}
@@ -99,7 +137,7 @@ International Baccalaureate, Grade: 45/45, Extended Essay (Maths): A
 
 \section{Selected Awards}
 \begin{itemize}
-    \item GIAC Advisory Board member (top marks)\hfill 2020
+    \item GIAC Advisory Board member (top performance)\hfill 2020
     \item Undergraduate Informatics Year 1 or Year 2 Prize (best performance)\hfill 2020
     \item Silver Prize, Iberoamerican Olympiad in Chemistry\hfill 2019
     \item Silver Prize, National Olympiad in Chemistry\hfill 2019
@@ -117,8 +155,8 @@ International Baccalaureate, Grade: 45/45, Extended Essay (Maths): A
 % -----------------------------------------------------------
 
 \section{Skills}
-\textbf{Programming Languages:} \small Python, Golang, C/C++, Rust, Ruby, JavaScript, Java (ranked by proficiency)
+\textbf{Programming Languages:} \small Python, Golang, C++, C, Rust, Ruby, Scala, JavaScript, Java (ranked by proficiency)
 
-\textbf{Tools and Frameworks:} \small Git, \LaTeX, Tensorflow, Docker, Ruby on Rails, Vue, React, React Native, Bootstrap
+\textbf{Tools and Frameworks:} \small Pytorch, Tensorflow, Docker, Ruby on Rails, Vue, React, React Native, Git, \LaTeX
 
 \end{document}
