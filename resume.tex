@@ -12,108 +12,84 @@
 \basicInfo{
   % (+44) 07740271205 $\bullet$
   % \href{mailto:zyj20@cam.ac.uk}{zyj20@cam.ac.uk}
-  zyj20 [at] cam.ac.uk
-%  \href{https://github.com/RoundofThree}{GitHub ID: RoundofThree}
-%  \href{https://www.linkedin.com/in/RoundofThree/}{Linkedin}
+  zyj20 [at] cl.cam.ac.uk
+  %\href{https://github.com/RoundofThree}{GitHub ID: RoundofThree}
+%  \href{https://www.linkedin.com/in/zhuo-ying-jiang-li-56957418a/}{Linkedin}
 }
 
 \section{Education}
-\datedsubsection{\textbf{\href{https://www.kcl.ac.uk/}{University of Cambridge}}, Cambridge, UK}{10/2022 -- 06/2023 (expected)}
-MPhil in Advanced Computer Science: \textit{Advanced Topics in Computer Architecture, Advanced Operating Systems, Computer Security: Principles and Foundations, Principles of Machine Learning Systems, Mobile Health}
-\datedsubsection{\textbf{\href{https://www.kcl.ac.uk/}{King's College London}}, London, UK}{09/2019 -- 06/2022}
-Qualification: First Degree with Honours
+\datedsubsection{\textbf{\href{https://www.cam.ac.uk/}{University of Cambridge}}, Cambridge, UK}{10/2023 -- 06/2026 (expected)}
+PhD in Computer Science.
+Thesis proposal: \textit{The Art of Exploitation in CHERI-Enabled Systems and Applications}
 
-BSc Computer Science: \textit{Information Security, Cryptography, Operating Systems, Internet Systems, Compilers, Foundations of Computing (Maths),
-C++ for algorithms and data structures, Optimization Methods, Artificial Intelligence}
+\datedsubsection{\textbf{\href{https://www.cam.ac.uk/}{University of Cambridge}}, Cambridge, UK}{10/2022 -- 06/2023}
+MPhil in Advanced Computer Science. % \textit{Advanced Topics in Computer Architecture, Advanced Operating Systems, Computer Security: Principles and Foundations, Principles of Machine Learning Systems, Mobile Health} \\
+Qualification: First Class
+\datedsubsection{\textbf{\href{https://www.kcl.ac.uk/}{King's College London}}, London, UK}{09/2019 -- 06/2022}
+BSc Computer Science. % \textit{Information Security, Cryptography, Operating Systems, Internet Systems, Compilers, Foundations of Computing (Maths),
+% C++ for algorithms and data structures, Optimization Methods, Artificial Intelligence} \\
+Qualification: First Degree with Honours
 \datedsubsection{\textbf{IES Son Pacs}, Balearic Islands, Spain}{09/2017 -- 06/2019}
-International Baccalaureate, Grade: 45/45, Extended Essay (Maths): A
+International Baccalaureate. Grade: 45/45, Extended Essay (Maths): A
 
 % -----------------------------------------------------------
 
 \section{Selected Projects}
 
-% Compilers security CHERI
-\datedsubsection{\textbf{Security implications on CHERI semantics of LLVM optimization passes}}{11/2022 - Ongoing}
+\datedsubsection{\textbf{Proofs-of-concept of Past Vulnerabilities in the CheriBSD Kernel}}{02/2024 - Ongoing}
 \begin{itemize}
-  \item Define CHERI C semantics and identify the CHERI-related invariants/properties.
-  \item Provide a thorough analysis and testing of LLVM optimization passes in the current CHERI LLVM fork, focusing on functional and security semantics preservation. In case CHERI security guarantees are violated, propose a proof of concept and workarounds if it is feasible. 
-  \item Propose and test new optimization passes and/or modify existing optimization passes which exploit CHERI invariants to improve performance. 
-  \item Evaluate performance and code size of each optimization pass and evaluate on real-world applications (Nginx, maybe OpenSSL) under different optimization levels. 
+  \item Maintaining a framework of exploit primitives and their preconditions given CHERI-based security mitigations.
+  \item Maintaining a vulnerable fork of the CheriBSD kernel with backpatched real-world vulnerabilities.
+  \item Developed individual \textit{proofs-of-concept} programs to prove the feasibility of exploitation techniques against the CheriBSD kernel given constraints.
+\end{itemize}
+
+\datedsubsection{\textbf{Damn Vulnerable Kernel Module for CheriBSD}}{04/2024 - Ongoing}
+\begin{itemize}
+  \item Developed a tool that provides a flexible way to inject exploitation primitives in a controlled adversarial experiment, which serves as a swiss army knife for demonstrating and evaluating exploitation techniques with controlled attacker capabilities.
+\end{itemize}
+
+\datedsubsection{\textbf{Open-source Binary Analysis Tools for the Morello Architecture}}{11/2023 - Ongoing}
+\begin{itemize}
+  \item Developed Ghidra Software Reverse Engineering suite Arm Morello architecture extension.
+  \item Developed GEF (GDB Enhanced Features) with Morello support: GDB plugins with visualisation commands of the heap state and program states.
+  \item Developed Unicorn Engine with Morello support: scriptable CPU emulation library based on QEMU and with Python bindings.
+\end{itemize}
+
+% Compiler optimizations security CHERI
+\datedsubsection{\textbf{Validation of CHERI IR Security Properties in LLVM Optimization Passes}}{11/2022 - 06/2023}
+\begin{itemize}
+  \item Proposed the CHERI Alive2 IR semantics model, modified from the Alive2 IR semantics model to conform to the CHERI C memory model assuming a purecap CheriABI runtime. The CHERI Alive2 IR semantics model has modified semantics for capability operations and memory accesses through capabilities as well as new undefined behaviour cases related to CHERI exceptions.
+  \item Proposed the concept of \textit{security refinements} and showed its relevance in validating the preservation of security semantics. 
+  \item Implemented the CHERI Alive2 fork of Alive2 that adds support for CHERI intrinsics and attributes emitted by the Morello LLVM compiler, replaces the pointer type to the capability type in the underlying SMT encoding and models the proposed CHERI LLVM IR semantics and refinement checks. 
+  \item Modified two compiler fuzzers to generate less conservative random programs in C and LLVM IR that cover pointer operations, pointer escaping, memory operations and CHERI-specific intrinsics and builtins.
+  % \item Propose and test new optimization passes and/or modify existing optimization passes which exploit CHERI invariants to improve performance. 
+  % \item Evaluate performance and code size of each optimization pass and evaluate on real-world applications (Nginx, maybe OpenSSL) under different optimization levels. 
 \end{itemize}
 
 % TASO with Apache TVM integration
-\datedsubsection{\textbf{TASO-TVM: A Multi-Platform Tensor Algebra SuperOptimizer for Deep Learning}}{11/2022 - 1/2023}
-\begin{itemize}
-  \item Designed a architecture that integrates the TVM backend to the TASO superoptimizer. 
-  \item Implemented the kernels and their cost model using AutoScheduler. 
-  \item Evaluated the runtime performance of deep learning networks (BERT, NasRNN) using the autoscheduled kernels on different architectures (Metal, CUDA and CPU). 
-\end{itemize}
+% \datedsubsection{\textbf{TASO-TVM: A Multi-Platform Tensor Algebra SuperOptimizer for Deep Learning}}{11/2022 - 1/2023}
+% \begin{itemize}
+%   \item Designed a architecture that integrates the TVM backend to the TASO superoptimizer. 
+%   \item Implemented the kernels and their cost model using AutoScheduler. 
+%   \item Evaluated the runtime performance of deep learning networks (BERT, NasRNN) using the autoscheduled kernels on different architectures (Metal, CUDA and CPU). 
+% \end{itemize}
 
 % Adversarial poisoning
-\datedsubsection{\textbf{Targeted and targeted backdoor poisoning attacks against Drebin under
-problem-space derived constraints}}{11/2021 - 04/2022}
-\begin{itemize}
-  \item Presented and implemented a custom gradient-based attack algorithm in Python to perform targeted attacks under previously identified feature-space constraints for Drebin.
-  \item Adapted the \textit{watermarking} targeted backdoor attack method, proposed in a paper about image classification backdoor attacks, to Drebin. Implemented the backdoor attack using the genetic algorithm with greedy heuristics.
-  \item Evaluated and compared the different poisoning attack approaches, both targeted and targeted backdoor attacks, using the presented algorithms, to attack Drebin.
-\end{itemize}
+% \datedsubsection{\textbf{Targeted and targeted backdoor poisoning attacks against Drebin under
+% problem-space derived constraints}}{11/2021 - 04/2022}
+% \begin{itemize}
+%   \item Presented and implemented a custom gradient-based attack algorithm in Python to perform targeted attacks under previously identified feature-space constraints for Drebin.
+%   \item Adapted the \textit{watermarking} targeted backdoor attack method, proposed in a paper about image classification backdoor attacks, to Drebin. Implemented the backdoor attack using the genetic algorithm with greedy heuristics.
+%   \item Evaluated and compared the different poisoning attack approaches, both targeted and targeted backdoor attacks, using the presented algorithms, to attack Drebin.
+% \end{itemize}
 
 % Regex matching engine: Brozowski algorithm based on derivatives
-\datedsubsection{\textbf{Regular expression matcher, lexer, parser and LLVM compiler front-end}}{09/2021}
-\begin{itemize}
-  \item Derived and proved the correctness of the Brzozowski derivatives for extended regular expression operations.
-  \item Implemented the Brzozowski algorithm in a functional language (Scala).
-  \item Implemented the Sulzmann \& Lu algorithm as an extension for regular expression lexing (Scala).
-  \item Implemented a parser and a compiler front-end that emits code in SSA form (LLVM-IR). 
-\end{itemize}
-
-% Rust shell: cs4414 University of Virginia Operating Systems course using Rust
-% \datedsubsection{\textbf{Userland shell}: A minimal userland shell written in Rust}{09/2021 -- Ongoing}
+% \datedsubsection{\textbf{Regular expression matcher, lexer, parser and LLVM compiler front-end}}{09/2021}
 % \begin{itemize}
-%   \item Implemented common internal commands, redirection and pipes
-%   \item Added support for background processes using threads
-% \end{itemize}
-
-% % \datedsubsection{\href{https://github.com/RoundofThree/optiver-competition}{\textbf{Optiver volatility prediction}}: Predict volatility given past trade and price series}{08/2021}
-% \datedsubsection{\textbf{Optiver volatility prediction}: Predict volatility given past trade and price series}{08/2021 -- 09/2021}
-% \begin{itemize}
-%   \item Implemented and compared different algorithms (decision trees and NN) in Python
-%   \item Optimized hyperparameters using Optuna
-%   \item Designed the prediction generator architecture having extensibility in mind
-% \end{itemize}
-
-% C rootkit
-% \datedsubsection{\textbf{Userland rootkit}: A Linux rootkit in C based on hijacking DLL}{08/2021 -- Ongoing}
-% \begin{itemize}
-%   \item Added support for hooking system calls using LD\_PRELOAD environment variable
-% \end{itemize}
-
-% MIT Distributed systems: golang MapReduce, raft server
-% \datedsubsection{\textbf{MapReduce client/server}: A MapReduce implementation in Golang}{07/2021}
-% \begin{itemize}
-%   \item Implemented the MapReduce model based on the paper \textit{MapReduce: Simplified Data Processing on Large Clusters} by Google and the MIT Distributed Systems course.
-% \end{itemize}
-
-% \datedsubsection{\href{https://github.com/RoundofThree/INT-Coursework-2021}{\textbf{Sokoban solver}}: A Sokoban solver using PDDL and OPTIC planner}{04/2021}
-% \begin{itemize}
-%   \item Analysed and performed experiments with OPTIC planner applied to Sokoban game
-%   \item Wrote a detailed report in \LaTeX
-% \end{itemize}
-
-% \datedsubsection{\href{https://roundofthree.github.io/labs}{\textbf{Blog}}: Hacking and competitions writeups}{}
-% \begin{itemize}
-%   \item Worked on and analysed 20+ challenges and vulnerable machines on HackTheBox and other CTFs.
-%   \item Wrote walkthroughs notes about operating system internals, shells, exploits.
-% \end{itemize}
-
-% Python implementations of algorithms DPLL, topological sorting, ...
-% \datedsubsection{\href{https://github.com/RoundofThree/python-scripts}{\textbf{Algorithms implementation}}: Python implementation of algorithms}{}
-% \begin{itemize}
-%   \item Implemented greedy and DPLL SAT solver.
-%   \item Implemented algorithm to perform topological sorting given a directed graph.
-%   \item Implemented algorithm to generate a connected components graph from a directed graph.
-%   \item Implemented 2-opt TSP solver, to find local minimum weighted Hamiltonian cycle in a complete graph expressed with a cost adjacency matrix.
-%   \item Implemented KMeans for clustering and Hunt algorithm for building a decision tree.
+%   \item Derived and proved the correctness of the Brzozowski derivatives for extended regular expression operations.
+%   \item Implemented the Brzozowski algorithm in a functional language (Scala).
+%   \item Implemented the Sulzmann \& Lu algorithm as an extension for regular expression lexing (Scala).
+%   \item Implemented a parser and a compiler front-end that emits code in SSA form (LLVM IR). 
 % \end{itemize}
 
 % -----------------------------------------------------------
@@ -122,31 +98,27 @@ problem-space derived constraints}}{11/2021 - 04/2022}
 
 \datedsubsection{\textbf{CTF competitions}}{}
 \begin{itemize}
-  \item Solved mostly reverse engineering challenges and some pwn challenges. Some of the CTFs I have attended are PwnEd CTF Quals and Finals 2022, LakeCTF Quals and Finals 2022, CSAW Quals 2022, Maple CTF 2022, HackTheBox University CTF 2021.
+  \item I mostly solve binary exploitation and reverse engineering challenges with the \textit{cheriPI} team at Cambridge. Some of the CTFs I have attended are PwnEd Qualification and Finals CTF, LakeCTF Qualification and Finals, CSAW, HackTheBox University CTF, Country2Country.
 \end{itemize}
 
-\datedsubsection{\textbf{\href{https://www.sans.org/}{GIAC Hacker tools, techniques, exploits and incident handling training}}, SANS Institute}{Remote}
+\datedsubsection{\textbf{Cambridge Cyber Security Society}}{}
 \begin{itemize}
-  \item Studied in detail defensive and offensive operations in internal networks
+  \item Organised socials to engage with other university members who are also into systems and security.
+  \item Proposed ideas and organised academic workshops to foster interest into practical adversarial exploration and CHERI.
 \end{itemize}
 
-% \datedsubsection{\textbf{\href{https://www.sans.org/}{CTF Content Creator}}, SANS Institute}{Remote}
+% \datedsubsection{\textbf{\href{https://www.sans.org/}{GIAC Hacker tools, techniques, exploits and incident handling training}}, SANS Institute}{Remote}
 % \begin{itemize}
-%   \item Designed a challenge about extracting confidential data from leaked .git directory
+%   \item Studied in detail defensive and offensive operations in internal networks.
 % \end{itemize}
 
-% \datedsubsection{\textbf{\href{https://app.hackthebox.eu/profile/367478}{HackTheBox Pro Hacker}}}{Remote}
-% \begin{itemize}
-%   \item Solved (mostly) reverse engineering challenges using Ghidra, x64dbg and gdb
-%   \item Attacked 15+ (mostly) Linux machines
-% \end{itemize}
 
-\datedsubsection{\textbf{Student Representative}}{King's College London}
-\begin{itemize}
-  \item Co-chaired the Student Staff Liaison Committee (SSLC)
-  \item Collected student feedback and discussed solutions with university staff
-  \item Proposed ideas and organised events to improve the learning environment of the student community
-\end{itemize}
+% \datedsubsection{\textbf{Student Representative}}{King's College London}
+% \begin{itemize}
+%   \item Co-chaired the Student Staff Liaison Committee (SSLC).
+%   \item Collected student feedback and discussed solutions with university staff.
+%   \item Proposed ideas and organised events to improve the learning environment of the student community.
+% \end{itemize}
 
 % \datedsubsection{\textbf{SnapSense}}{Remote}
 % \datedsubsection{Software Developer}{03/2021}
@@ -164,33 +136,34 @@ problem-space derived constraints}}{11/2021 - 04/2022}
 
 % -----------------------------------------------------------
 
-\section{Selected Awards}
-\begin{itemize}
-    \item Alan Fairbourn Memorial Prize (most meritorious Final Year Project in the
-    Department of Informatics)\hfill 2022
-    \item Undergraduate Informatics BSc Finalist Prize (best performance during the final year of the BSc Computer Science programmes)\hfill 2022
-    \item Undergraduate Informatics Top-Performing Graduate (best overall performance over the duration of study in the
-    Department of Informatics for an undergraduate finalist)\hfill 2022
-    \item GIAC Advisory Board member (top performance)\hfill 2020
-    \item Undergraduate Informatics Year 1 or Year 2 Prize (best performance)\hfill 2020
-    \item Silver Prize, Iberoamerican Olympiad in Chemistry\hfill 2019
-    \item Silver Prize, National Olympiad in Chemistry\hfill 2019
-    \item Silver Prize, National Olympiad in Physics\hfill 2019
-\end{itemize}
-
-% -----------------------------------------------------------
-
-% \section{Publications}
+% \section{Selected Awards}
 % \begin{itemize}
-%     \item Shihong Song*, \textbf{Jiayi Weng}*, Hang Su, Dong Yan, Haosheng Zou, and Jun Zhu, ``Playing FPS Game with Environment-aware Hierarchical Reinforcement Learning,'' in \textbf{IJCAI'19 (oral)}, \href{https://trinkle23897.github.io/cv/viz2018.html}{[Page]} \href{https://www.ijcai.org/proceedings/2019/0482.pdf}{[PDF]}
-%     \item \textbf{Jiayi Weng}, Tsung-Yi Ho, Weiqing Ji, Peng Liu, Mengdi Bao, and Hailong Yao,  ``URBER: Ultrafast Rule-Based Escape Routing Method for Large-Scale Sample Delivery Biochips,'' in \textbf{TCAD'18}, \href{https://trinkle23897.github.io/cv/urber.html}{[Page]} \href{https://ieeexplore.ieee.org/document/8552446}{[PDF]}
+%     \item Alan Fairbourn Memorial Prize (most meritorious Final Year Project in the
+%     Department of Informatics)\hfill 2022
+%     \item Undergraduate Informatics BSc Finalist Prize (best performance during the final year of the BSc Computer Science programmes)\hfill 2022
+%     \item Undergraduate Informatics Top-Performing Graduate (best overall performance over the duration of study in the
+%     Department of Informatics for an undergraduate finalist)\hfill 2022
+%     \item GIAC Advisory Board member (top performance)\hfill 2020
+%     \item Undergraduate Informatics Year 1 or Year 2 Prize (best performance)\hfill 2020
+%     \item Silver Prize, Iberoamerican Olympiad in Chemistry\hfill 2019
+%     \item Silver Prize, National Olympiad in Chemistry\hfill 2019
+%     \item Silver Prize, National Olympiad in Physics\hfill 2019
 % \end{itemize}
 
 % -----------------------------------------------------------
 
-\section{Skills}
-\textbf{Programming Languages:} \small C++, C, Python, Rust, Scala, Golang.
+% \section{Publications and Articles}
+% \begin{itemize}
+%   \item Blog post: Exploiting various NJS bugs to break out the interpreter sandbox
+%     % \item Shihong Song*, \textbf{Jiayi Weng}*, Hang Su, Dong Yan, Haosheng Zou, and Jun Zhu, ``Playing FPS Game with Environment-aware Hierarchical Reinforcement Learning,'' in \textbf{IJCAI'19 (oral)}, \href{https://trinkle23897.github.io/cv/viz2018.html}{[Page]} \href{https://www.ijcai.org/proceedings/2019/0482.pdf}{[PDF]}
+%     % \item \textbf{Jiayi Weng}, Tsung-Yi Ho, Weiqing Ji, Peng Liu, Mengdi Bao, and Hailong Yao,  ``URBER: Ultrafast Rule-Based Escape Routing Method for Large-Scale Sample Delivery Biochips,'' in \textbf{TCAD'18}, \href{https://trinkle23897.github.io/cv/urber.html}{[Page]} \href{https://ieeexplore.ieee.org/document/8552446}{[PDF]}
+% \end{itemize}
 
-\textbf{Others:} \small LLVM, binary exploitation, reverse engineering, program analysis.
+% -----------------------------------------------------------
+
+% \section{Skills}
+% \textbf{Programming Languages:} \small C++, C, Python, Rust, Scala, Golang.
+
+% \textbf{Others:} \small LLVM, binary exploitation, reverse engineering, program analysis, debugging.
 
 \end{document}
