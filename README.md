@@ -4,7 +4,7 @@ Curriculum vitae.
 
 To compile:
 ```sh
-latexmk -xelatex
+latexmk -xelatex resume.tex
 ```
 
 ## References
